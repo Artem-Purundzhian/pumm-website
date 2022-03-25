@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+{% include "header.html" %}
+<div class="main-content">
+  {% include "banner.html"%}
+  <div class="_container">
+    {% include "sofa-properties.html"%}
+    {% include "promotion.html"%}
+    {% include "constructor.html"%}
+  </div>
+  {% include "advert.html"%}
+</div>
+{% include "footer.html" %} {% endblock %}

@@ -1,0 +1,100 @@
+.properties__container {
+  padding: 79px 0px;
+  display: flex;
+  flex-direction: row;
+  .infoBlock {
+    flex: 0 0 40%;
+    margin-top: 30px;
+    .title {
+      font-weight: 400;
+      margin-bottom: 40px;
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+      max-width: 450px;
+      color: $color-darkGrey;
+    }
+    .infoBlock__button {
+      @extend ._button;
+      background-color: $color-orange;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      align-items: center;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      padding: 12px 21px;
+    }
+  }
+  .propertie__cards {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .card__container {
+      flex: 1 1 32%;
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 30px;
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      .card__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 140px;
+        }
+        margin-bottom: 20px;
+      }
+      .card__title {
+        margin-bottom: 6px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: $color-darkGrey;
+      }
+      .card__subtitle {
+        margin-bottom: 6px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        color: #292c35;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .properties__container {
+    flex-direction: column;
+    .infoBlock {
+      text-align: center;
+      .title {
+        flex: 0 0 100%;
+        max-width: none;
+      }
+      .infoBlock__button {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 557px) {
+  .properties__container {
+    .propertie__cards {
+      .card__container {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

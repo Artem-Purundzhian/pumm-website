@@ -1,0 +1,18 @@
+// Normalise
+@import "./vendor/normalise";
+
+// Base
+@import "./base/variables";
+@import "./base/base";
+@import "./base/typography";
+
+// Components
+@import "./components/footer";
+@import "./components/header";
+
+// Sections
+@import "./sections/banner.scss";
+@import "./sections/sofa-properties.scss";
+@import "./sections/promotion.scss";
+@import "./sections/constructor.scss";
+@import "./sections/advert.scss";

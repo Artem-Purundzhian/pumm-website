@@ -1,0 +1,121 @@
+header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $color-white;
+  .header__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .navbar {
+      display: flex;
+      align-items: center;
+      .navabar__burger {
+        span {
+          display: none;
+          width: 30px;
+          height: 4px;
+          border-radius: 7px;
+          background-color: $color-darkBlue;
+          margin: 3px 0px;
+        }
+      }
+      .navbar__links {
+        display: flex;
+        align-items: center;
+        & > * {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .navbar__button {
+          button {
+            @extend ._button;
+            background-color: $color-darkBlue;
+          }
+        }
+        .navbar__link {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: $color-darkBlue;
+        }
+        display: flex;
+      }
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+    .header__buttons {
+      position: static;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      & > * {
+        margin-left: 25px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .header__container {
+      .navbar {
+        .navabar__burger {
+          position: relative;
+          z-index: 100;
+          span {
+            display: block;
+          }
+        }
+        .navbar__links {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          display: flex;
+          // visibility: hidden;
+          pointer-events: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column-reverse;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          min-height: 100vh;
+          background-color: $color-white;
+          & > * {
+            margin-right: 0px;
+            padding: 12.5px 0px;
+          }
+          &._active {
+            opacity: 1;
+            // visibility: visible;
+            pointer-events: auto;
+          }
+          .navbar__button {
+            button {
+            }
+          }
+          .navbar__link {
+          }
+        }
+      }
+      .logo {
+      }
+      .header__buttons {
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.advert {
+  height: 75vh;
+  background-image: url("../../images/advert.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10%;
+  margin-bottom: 70px;
+  .advert__container {
+    height: 100%;
+    display: flex;
+    justify-content: baseline;
+  }
+}
+
+.ticker {
+  margin-top: auto;
+  display: flex;
+  .ticker__list {
+    color: $color-white;
+    display: flex;
+    margin-top: 20px;
+    animation: ticker 15s infinite linear;
+    white-space: nowrap;
+    font-weight: 300;
+    font-size: 80px;
+    .ticker__item {
+      margin-right: 20px;
+    }
+  }
+  &:hover {
+    & > * {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 425px) {
+  .advert {
+    height: 50vh;
+  }
+  .ticker {
+    margin-top: auto;
+    display: flex;
+    .ticker__list {
+      font-weight: 300;
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .advert {
+    height: 40vh;
+  }
+  .ticker {
+    margin-top: auto;
+    display: flex;
+    .ticker__list {
+      font-weight: 300;
+      font-size: 40px;
+    }
+  }
+}
