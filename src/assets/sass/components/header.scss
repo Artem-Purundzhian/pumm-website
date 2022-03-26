@@ -16,12 +16,24 @@ header {
       align-items: center;
       .navabar__burger {
         span {
+          transition: transform 0.3s ease;
           display: none;
           width: 30px;
           height: 4px;
           border-radius: 7px;
           background-color: $color-darkBlue;
           margin: 3px 0px;
+        }
+      }
+      .burger__active {
+        span:nth-of-type(2) {
+          display: none !important;
+        }
+        span:first-child {
+          transform: rotate(45deg) translateY(110%);
+        }
+        span:last-child {
+          transform: rotate(-45deg) translateY(-120%);
         }
       }
       .navbar__links {
@@ -44,6 +56,9 @@ header {
           font-size: 16px;
           line-height: 19px;
           color: $color-darkBlue;
+          &:hover{
+            text-decoration: underline;
+          }
         }
         display: flex;
       }
@@ -60,6 +75,10 @@ header {
       display: flex;
       align-items: center;
       & > * {
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
         margin-left: 25px;
         &:first-child {
           margin-left: 0;
@@ -80,6 +99,7 @@ header {
             display: block;
           }
         }
+
         .navbar__links {
           opacity: 0;
           transition: opacity 0.5s ease;

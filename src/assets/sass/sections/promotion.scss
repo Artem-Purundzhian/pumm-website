@@ -1,5 +1,5 @@
 .promotion {
-  height: 100vh;
+  height: 90vh;
   margin-bottom: 79px 0;
   .promotion__container {
     height: 100%;
@@ -18,6 +18,7 @@
       align-content: flex-end;
       align-items: flex-end;
       padding: 0 25px 25px 25px;
+      border-radius: 5px;
       .promotion__mark {
         font-family: 'Roboto', sans-serif;
         display: flex;
@@ -104,6 +105,7 @@
 
 @media (max-width: 768px) {
     .promotion {
+      height: 80vh;
   
       .promotion__container {
         .promotion__title {
@@ -125,7 +127,7 @@
 
 @media (max-width: 425px) {
   .promotion {
-    height: 80vh;
+    height: 75vh;
 
     .promotion__container {
       .promotion__title {

@@ -71,6 +71,7 @@ textarea {
 }
 
 ._button {
+  transition: opacity 0.5s ease;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -78,6 +79,11 @@ textarea {
   border-radius: 30px;
   padding: 10px 20px;
   color: $color-white;
+  outline: none;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 ._title {
@@ -97,6 +103,6 @@ textarea {
 
 @media (max-width: 425px) {
   ._title {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
