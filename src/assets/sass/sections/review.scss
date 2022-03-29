@@ -125,6 +125,9 @@
       transition: transform 0.3s ease;
       transform: translate(0%);
       user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
       .review__card {
         display: flex;
         flex-direction: column;
