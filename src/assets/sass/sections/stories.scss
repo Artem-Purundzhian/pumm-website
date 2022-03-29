@@ -89,14 +89,19 @@
           text-transform: uppercase;
           display: flex;
           align-items: center;
+          .button__content{
+            display: flex;
+            align-items:center;
+            padding-right: 7px;
+            transition: padding-right 0.2s ease;
+          }
           img {
-            transition: margin-left 0.2s ease;
-            margin-left: 7px;
+            transition: padding 0.2s ease;
           }
           &:hover {
             cursor: pointer;
-            img {
-              margin-left: 10px;
+            .button__content{
+              padding-right: 10px;
             }
           }
         }
