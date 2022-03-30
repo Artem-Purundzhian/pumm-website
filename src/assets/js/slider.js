@@ -36,7 +36,7 @@ function slider(card, slidesToSlide = 1, slidesToShow = 4) {
         ? (endPoint = e.screenX)
         : (endPoint = e.changedTouches[0].clientX);
       const distance = endPoint - startingPoint;
-      if (distance > 100) {
+      if (distance > 50) {
         if (counter >= 0) {
           return;
         }
@@ -50,7 +50,7 @@ function slider(card, slidesToSlide = 1, slidesToShow = 4) {
             }%)`;
           });
         }
-      } else if (distance < -100) {
+      } else if (distance < -50) {
         if (-counter > cardsCount - slidesToShow) {
           return;
         }
